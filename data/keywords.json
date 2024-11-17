@@ -108,7 +108,9 @@
     ],
 
     "columns": [
-        "fatalities_sum", 
+        "future_fatalities",
+        "past_fatalities",
+        "num_events", 
         "fatalities",
         "sub_event_type_Abduction/forced disappearance",
         "sub_event_type_Agreement", 
