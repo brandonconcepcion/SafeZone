@@ -134,7 +134,8 @@ def process():
         df['escalation_count'] = count_escalation_words_vectorized(df['notes'], escalation_pattern)
 
         print("Encoding Civilian Targeting...")
-        df['civilian_targeting'] = df['civilian_targeting'].fillna('Unknown') == 'Civilian targeting'
+        targets = (df['civilian_targeting'].fillna('Unknown') == 'Civilian targeting')
+        df['civilian_targeting'] = targets.astype(int)
         
         print("Selecting columns of interest...")
         columns_of_interest = words['columns']
