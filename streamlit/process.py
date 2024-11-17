@@ -7,6 +7,7 @@ import json
 import os
 
 def process():
+    print("Making streamlit data")
     df = pd.read_csv('../data/acled.csv')
     df['event_date'] = pd.to_datetime(df['event_date'])
 
@@ -133,14 +134,14 @@ def process():
     targets = (df['civilian_targeting'].fillna('Unknown') == 'Civilian targeting')
     df['civilian_targeting'] = targets.astype(int)
     
-    print("Selecting columns of interest...")
+    print("Selecting columns of interest... (with country and year)")
     columns_of_interest = words['columns']
-    columns_of_interest += ['country']
+    columns_of_interest += ['country', 'year']
     df = df[columns_of_interest]
 
     print("Removing rows with missing 'future_fatalities'...")
     df = df[df.future_fatalities != -1]
 
     print("Dataset preprocessing complete!")
-    df.to_csv('data/acled_preprocessed.csv', index=False)
+    df.to_csv('acled_preprocessed_sl.csv', index=False)
     return df
