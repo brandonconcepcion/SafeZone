@@ -54,5 +54,5 @@ if uploaded_file is not None:
         st.error(f"The uploaded CSV must contain the following columns: {', '.join(required_columns)}")
 
 else:
-    st.info("Please upload a CSV file with 'Country', 'Civilian', and 'Doctor Danger' columns.")
+    st.info("Please upload a CSV file with 'Country', 'Civilian Danger', and 'Doctor Danger' columns.")
 
