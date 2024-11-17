@@ -205,6 +205,7 @@
         "women targeted: accused of witchcraft/sorcery",
         "women targeted: government officials", 
         "women targeted: politicians",
-        "escalation_count"
+        "escalation_count",
+        "civilian_targeting"
     ]
 }
