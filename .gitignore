@@ -6,3 +6,6 @@ data/ohe_acled.csv
 data/acled_preprocessed.csv
 
 __pycache__/
+streamlit/acled_preprocessed_sl.csv
+
+**/.DS_Store
